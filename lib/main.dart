@@ -14,19 +14,64 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            // MARGIN
-            // margin: EdgeInsets.all(10.0),
-            // margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
-            // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
-            margin: EdgeInsets.only(left: 30.0),
-            // PADDING
-            padding: EdgeInsets.all(20.0),
-            color: Colors.white,
-            child: Text('Hello'),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.white,
+                child: Text('container 1.'),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.red,
+                child: Text('container 2.'),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.blue,
+                child: Text('container 3.'),
+              ),
+            ],
           ),
+          // child: Row(
+          //   crossAxisAlignment: CrossAxisAlignment.stretch,
+          //   children: [
+          //     Container(
+          //       height: 100.0,
+          //       width: 100.0,
+          //       color: Colors.white,
+          //       child: Text('container 1.'),
+          //     ),
+          //     SizedBox(
+          //       width: 20.0,
+          //     ),
+          //     Container(
+          //       height: 100.0,
+          //       width: 100.0,
+          //       color: Colors.red,
+          //       child: Text('container 2.'),
+          //     ),
+          //     SizedBox(
+          //       width: 20.0,
+          //     ),
+          //     Container(
+          //       height: 100.0,
+          //       width: 100.0,
+          //       color: Colors.blue,
+          //       child: Text('container 3.'),
+          //     ),
+          //   ],
+          // ),
         ),
       ),
     );
