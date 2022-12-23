@@ -14,38 +14,78 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                width: 100.0,
-                color: Colors.red,
-                child: Text('container 1.'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage('images/clip-389.png'),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.yellow,
-                    child: Text('container 2.'),
+              Text(
+                'C. Diana-Florentina',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 20.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Front-End Developer',
+                style: TextStyle(
+                    fontFamily: 'SourceSansPro',
+                    fontSize: 15.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.0),
+              ),
+              SizedBox(
+                width: 150.0,
+                height: 20.0,
+                child: Divider(
+                  color: Colors.tealAccent[100],
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
                   ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.green,
-                    child: Text('container 3.'),
+                  title: Text(
+                    '+ 123 456 789',
+                    style: TextStyle(
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                      color: Colors.teal[900],
+                    ),
                   ),
-                ],
+                ),
               ),
-              Container(
-                width: 100.0,
-                color: Colors.blue,
-                child: Text('container 4.'),
-              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'diana.florentina@email.com',
+                    style: TextStyle(
+                        color: Colors.teal[900],
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0),
+                  ),
+                ),
+              )
             ],
           ),
         ),
